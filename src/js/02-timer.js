@@ -50,10 +50,10 @@ class Timer{
 }
 const timer = new Timer();
 function timeCalculator(time){
-  days = addLeadingZero(Math.floor(time / (1000 * 60 * 60 * 24)));
-  hours = addLeadingZero(Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
-  minutes = addLeadingZero(Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)));
-  seconds = addLeadingZero(Math.floor((time % (1000 * 60)) / 1000));
+ const days = addLeadingZero(Math.floor(time / (1000 * 60 * 60 * 24)));
+  const hours = addLeadingZero(Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+  const minutes = addLeadingZero(Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)));
+ const  seconds = addLeadingZero(Math.floor((time % (1000 * 60)) / 1000));
   return {days, hours, minutes, seconds};
 };
 function addLeadingZero(value){
@@ -61,7 +61,7 @@ function addLeadingZero(value){
 };
 const calendar = flatpickr("#datetime-picker", options);
 el.startBtn.addEventListener('click', timer.start);
-function timeRenew ({days,hours, minutes, seconds}){
+function timeRenew ({days, hours, minutes, seconds}){
   el.daysValue.textContent = days;
   el.hoursValue.textContent = hours;
   el.minutsValue.textContent = minutes;
