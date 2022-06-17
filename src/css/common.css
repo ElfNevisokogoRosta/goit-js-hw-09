@@ -36,3 +36,26 @@ img {
   line-height: 1.33;
 
 }
+.timer{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 40px;
+  gap: 30px;
+}
+.field{
+  padding: 40px;
+  background-color: #0012ff;
+  border-radius: 12px;
+}
+.field > .value{
+  font-size: 24px;
+  color: #12faf1;
+}
+.field > .label{
+  font-size: 20px;
+  color: #12faf1;
+}
+.datetime-picker{
+  align-items: center;
+}

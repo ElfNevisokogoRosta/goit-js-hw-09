@@ -1,4 +1,5 @@
 import flatpickr from "flatpickr";
+import Notiflix from 'notiflix';
 // Додатковий імпорт стилів
 import "flatpickr/dist/flatpickr.min.css";
 const el ={
@@ -35,13 +36,10 @@ class Timer{
       const nowTime = Date.now();
       const distance = futuredTime-nowTime;
       if(distance<1){
-        console.log(this.intervalId);
-        console.log(this)
         clearInterval(this.intervalId);
+        Notiflix.Notify.success('Times ends');
         return;
       };
-      console.log(distance);
-      console.log(this.intervalId);
       const timesObj = timeCalculator(distance);
       timeRenew(timesObj);
     }, 1000);
