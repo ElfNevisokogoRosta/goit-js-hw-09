@@ -13,9 +13,9 @@ el.btnStop.addEventListener('click', onBtnStop);
 let timerId=null;
 function onBtnStart (e){
   el.btnStop.disabled = false;
+  el.btnStart.disabled = true;
   timerId = setInterval(() => {
    el.bodyEl.style.backgroundColor = getRandomHexColor();
-   el.btnStart.disabled = true;
    el.btnStart.style.border = 'none';
    el.btnStop.style.border = 'none';
   }, 1000);
