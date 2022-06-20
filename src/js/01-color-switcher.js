@@ -13,11 +13,11 @@ el.btnStop.addEventListener('click', onBtnStop);
 let timerId=null;
 function onBtnStart (e){
   timerId = setInterval(() => {
+    el.btnStop.disabled = false;
    el.bodyEl.style.backgroundColor = getRandomHexColor();
    el.btnStart.disabled = true;
    el.btnStart.style.border = 'none';
    el.btnStop.style.border = 'none';
-   el.btnStop.disabled = false;
   }, 1000);
 };
 function onBtnStop (e){
