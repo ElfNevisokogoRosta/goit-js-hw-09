@@ -16,7 +16,10 @@ const options = {
   minuteIncrement: 1,
   isActive: false,
   minDate: new Date(), // через цей атрибут неможливо вибрати невалідну дату
-  onOpen(){
+  onClose(selectedDates){
+    if(selectedDates[0]< Date.now()){
+      Notiflix.Notify.warning('Please choose a date in the future');
+    }
     el.startBtn.disabled = false;
   }
 };
