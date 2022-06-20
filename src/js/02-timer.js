@@ -15,7 +15,7 @@ const options = {
   defaultDate: Date.now(),
   minuteIncrement: 1,
   isActive: false,
-  minDate: new Date(), // через цей атрибут неможливо вибрати невалідну дату
+  //minDate: new Date(), // через цей атрибут неможливо вибрати невалідну дату
   onClose(selectedDates){
     if(selectedDates[0]< Date.now()){
       Notiflix.Notify.warning('Please choose a date in the future');
